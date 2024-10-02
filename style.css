@@ -42,6 +42,13 @@ img {
 form {
     display: none;
     text-align: center;
+    width: 80dvw;
+    padding-top: 5dvh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
 input {
@@ -53,6 +60,8 @@ input {
     background: var(--tg-theme-section-separator-color);
     color: var(--tg-theme-text-color);
     transition: all .2s;
+    width: 50%;
+    height: 10%;
 }
 
 input:focus {
