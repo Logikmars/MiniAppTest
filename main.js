@@ -18,7 +18,7 @@ sBtn.addEventListener("click", (event) => {
     let title = document.getElementsByClassName("title-inp")[0].value;
     let description = document.getElementsByClassName("desc-inp")[0].value;
     let text = document.getElementsByClassName("text-inp")[0].value;
-
+    document.getElementsByClassName("Main")[0].style.display = "flex";
     let data = {
         title: title,
         desc: description,
