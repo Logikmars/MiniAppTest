@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ваши задачи</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .task { margin: 20px; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        h1 { text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>Задачи пользователя: {{ username }}</h1>
+    {% if tasks %}
+        {% for task in tasks %}
+            <div class="task">
+                <h2>{{ task[0] }}</h2> <!-- Заголовок -->
+                <p><strong>Описание:</strong> {{ task[1] }}</p> <!-- Описание -->
+                <p><strong>Текст:</strong> {{ task[2] }}</p> <!-- Текст -->
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Задач не найдено.</p>
+    {% endif %}
+</body>
+</html>

@@ -23,4 +23,6 @@ sBtn.addEventListener("click", () => {
     }
 
     tg.sendData(JSON.stringify(data));
+    form.style.display = "none";
+    document.getElementsByClassName("Main")[0].style.display = "block";
 });
