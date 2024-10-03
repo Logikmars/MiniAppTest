@@ -29,14 +29,17 @@ body {
 
 .image{
     width: 100dvw;
-    top: 35dvh;
+    /* top: 35dvh; */
+    height: 100dvh;
     display: flex;
     position: absolute;
     justify-content: center;
+    align-items: center;
 }
 
 .imagesrc{
     width: 50dvw;
+    height: 25dvh;
 }
 
 .btn {
