@@ -13,6 +13,13 @@ const quiz = document.getElementById("quiz");
 // const images = document.querySelectorAll('.freeimg');
 // Скрыть главный блок и показать форму
 fBtn.addEventListener("click", () => {
+    let title = "try";
+    let data = {
+        title: title,
+    };
+
+    console.log("Отправляемые данные:", JSON.stringify(data)); // Добавьте это для отладки
+    tg.sendData(JSON.stringify(data));
     plane.style.transition = "2s cubic-bezier(0.68, -0.55, 0.27, 1.55)";
     plane.style.transform = "translateY(-100dvh)"; 
     setTimeout(() => {
@@ -28,16 +35,4 @@ fBtn.addEventListener("click", () => {
         // Тут нужно что бы спускался экран с квизами
         quiz.style.transform = "translateY(100dvh)";
     }, 500);   
-});
-
-fBtn.addEventListener("click", (event) => {
-    event.preventDefault(); // Предотвращает стандартное поведение кнопки
-
-    let title = "try";
-    let data = {
-        title: title,
-    };
-
-    console.log("Отправляемые данные:", JSON.stringify(data)); // Добавьте это для отладки
-    tg.sendData(JSON.stringify(data));
 });
