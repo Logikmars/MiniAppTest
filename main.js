@@ -9,6 +9,8 @@ const imageplane = document.getElementById("imageplane");
 const title = document.getElementById("title");
 // Блок с квизами
 const quiz = document.getElementById("quiz");
+// Получаем все элементы квизов
+// const images = document.querySelectorAll('.freeimg');
 // Скрыть главный блок и показать форму
 fBtn.addEventListener("click", () => {
     plane.style.transition = "2s cubic-bezier(0.68, -0.55, 0.27, 1.55)";
@@ -28,19 +30,14 @@ fBtn.addEventListener("click", () => {
     }, 500);   
 });
 
-// Отправка данных
-// sBtn.addEventListener("click", (event) => {
-//     event.preventDefault(); // Предотвращает стандартное поведение кнопки
+fBtn.addEventListener("click", (event) => {
+    event.preventDefault(); // Предотвращает стандартное поведение кнопки
 
-//     let title = document.getElementsByClassName("title-inp")[0].value;
-//     let description = document.getElementsByClassName("desc-inp")[0].value;
-//     let text = document.getElementsByClassName("text-inp")[0].value;
-//     document.getElementsByClassName("Main")[0].style.display = "flex";
-//     let data = {
-//         title: title,
-//         desc: description,
-//         text: text
-//     };
+    let title = "try";
+    let data = {
+        title: title,
+    };
 
-//     tg.sendData(JSON.stringify(data));
-// });
+    console.log("Отправляемые данные:", JSON.stringify(data)); // Добавьте это для отладки
+    tg.sendData(JSON.stringify(data));
+});
