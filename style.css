@@ -58,31 +58,41 @@ body {
 
 }
 
-form {
-    display: none;
-    text-align: center;
-    width: 80dvw;
-    padding-top: 5dvh;
+.quiz{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -100dvh;
+    transition: 2.5s ease;
     flex-direction: column;
-    flex-wrap: nowrap;
+}
+
+.quizTitle{
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    width: 100dvw;
+    margin: 5dvh auto;
 }
 
-input {
-    outline: none;
-    border-radius: 5px;
-    border: 2px solid #535353;
-    padding: 15px 10px;
-    margin: 10px 0 0;
-    background: var(--tg-theme-section-separator-color);
-    color: var(--tg-theme-text-color);
-    transition: all .2s;
-    width: 50%;
-    height: 10%;
+.titleSec{
+    font-size: 8dvw;
 }
 
-input:focus {
-    border-color: var(--tg-theme-secondary-bg-color)
+.quizes{
+    display: flex;
+    row-gap: 5dvh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    gap: 5dvw;
+}
+
+.freeimg{
+    width: 14dvw;
 }
