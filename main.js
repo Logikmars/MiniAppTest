@@ -10,7 +10,7 @@ const title = document.getElementById("title");
 // Блок с квизами
 const quiz = document.getElementById("quiz");
 // Получаем все элементы квизов
-// const images = document.querySelectorAll('.freeimg');
+const images = document.querySelectorAll('.freeimg');
 // Скрыть главный блок и показать форму
 fBtn.addEventListener("click", () => {
     let title = "try";
@@ -18,7 +18,6 @@ fBtn.addEventListener("click", () => {
         title: title,
     };
     
-    console.log("Отправляемые данные:", JSON.stringify(data)); // Добавьте это для отладки
     plane.style.transition = "2s cubic-bezier(0.68, -0.55, 0.27, 1.55)";
     plane.style.transform = "translateY(-100dvh)"; 
     setTimeout(() => {
