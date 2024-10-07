@@ -6,7 +6,7 @@ let sBtn = document.getElementsByClassName("s-btn")[0];
 const form = document.getElementsByClassName("test-form")[0];
 const plane = document.getElementById("plane");
 const imageplane = document.getElementById("imageplane");
-const title = document.getElementById("title");
+const titles = document.getElementById("title");
 // Блок с квизами
 const quiz = document.getElementById("quiz");
 // Получаем все элементы квизов
@@ -23,12 +23,12 @@ fBtn.addEventListener("click", () => {
     setTimeout(() => {
         fBtn.style.transition = "4s ease";
         fBtn.style.transform = "translateY(150dvh)";
-        title.style.transition = "2.5s ease";
-        title.style.transform = "translateY(150dvh)";
+        titles.style.transition = "2.5s ease";
+        titles.style.transform = "translateY(150dvh)";
         setTimeout(() => {
             imageplane.style.display = "none";
             fBtn.style.display = "none";
-            title.style.display = "none";
+            titles.style.display = "none";
         }, 1500);
         // Тут нужно что бы спускался экран с квизами
         quiz.style.transform = "translateY(100dvh)";
