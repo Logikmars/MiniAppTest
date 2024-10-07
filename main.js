@@ -17,9 +17,10 @@ fBtn.addEventListener("click", () => {
     let data = {
         title: title,
     };
-    Telegram.WebApp.expand(); 
+    
     console.log("Отправляемые данные:", JSON.stringify(data)); // Добавьте это для отладки
     tg.sendData(JSON.stringify(data));
+    tg.WebApp.expand(); 
     plane.style.transition = "2s cubic-bezier(0.68, -0.55, 0.27, 1.55)";
     plane.style.transform = "translateY(-100dvh)"; 
     setTimeout(() => {
