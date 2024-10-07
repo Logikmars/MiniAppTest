@@ -33,6 +33,5 @@ fBtn.addEventListener("click", () => {
         // Тут нужно что бы спускался экран с квизами
         quiz.style.transform = "translateY(100dvh)";
         tg.sendData(JSON.stringify(data));
-        tg.WebApp.expand(); 
     }, 500);   
 });
