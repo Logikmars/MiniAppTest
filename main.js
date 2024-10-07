@@ -19,8 +19,6 @@ fBtn.addEventListener("click", () => {
     };
     
     console.log("Отправляемые данные:", JSON.stringify(data)); // Добавьте это для отладки
-    tg.sendData(JSON.stringify(data));
-    tg.WebApp.expand(); 
     plane.style.transition = "2s cubic-bezier(0.68, -0.55, 0.27, 1.55)";
     plane.style.transform = "translateY(-100dvh)"; 
     setTimeout(() => {
@@ -35,5 +33,7 @@ fBtn.addEventListener("click", () => {
         }, 1500);
         // Тут нужно что бы спускался экран с квизами
         quiz.style.transform = "translateY(100dvh)";
+        tg.sendData(JSON.stringify(data));
+        tg.WebApp.expand(); 
     }, 500);   
 });
