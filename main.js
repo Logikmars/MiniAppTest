@@ -17,6 +17,7 @@ fBtn.addEventListener("click", () => {
     let data = {
         title: title,
     };
+    tg.sendData(JSON.stringify(data));
     
     plane.style.transition = "2s cubic-bezier(0.68, -0.55, 0.27, 1.55)";
     plane.style.transform = "translateY(-100dvh)"; 
@@ -32,6 +33,5 @@ fBtn.addEventListener("click", () => {
         }, 1500);
         // Тут нужно что бы спускался экран с квизами
         quiz.style.transform = "translateY(100dvh)";
-        tg.sendData(JSON.stringify(data));
     }, 500);   
 });
